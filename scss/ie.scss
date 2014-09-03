@@ -13,18 +13,32 @@
 @import "libs/placeholders";
 
 @import "libs/grid";
-@import "libs/icons";
-@import "libs/layouts";
 @import "libs/forms";
 @import "libs/typography";
 // -- end framework
 
 // -- Plugins
 @import "plugins/flexslider";
+@import "plugins/fontawesome";
 // -- end plugins
 
 // -- breakpoints
+@media (max-width: $screen-xs-max)
+{
 
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+{
+
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+{
+
+}
+@media (min-width: $screen-lg-min)
+{
+
+}
 
 // Print styles
 @media print {
