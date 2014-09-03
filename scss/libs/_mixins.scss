@@ -158,36 +158,47 @@
   font-size: (0.125 * $sizeValue) + rem;
 }
 
+// Mixins From BootStrap
+// --------------------------------------------------
 
-// Responsive image
-// -------------------------------------------------------
-// Keep images from scaling beyond the width of their parents.
-// Taken from bootstrap 3.2
+// Utilities
+@import "mixins/hide-text";
+@import "mixins/opacity";
+@import "mixins/image";
+@import "mixins/labels";
+@import "mixins/reset-filter";
+@import "mixins/resize";
+@import "mixins/responsive-visibility";
+@import "mixins/size";
+@import "mixins/tab-focus";
+@import "mixins/text-emphasis";
+@import "mixins/text-overflow";
+@import "mixins/vendor-prefixes";
 
-@mixin img-responsive($display: block) {
-  display: $display;
-  width: 100% \9; // Force IE10 and below to size SVG images correctly
-  max-width: 100%; // Part 1: Set a maximum relative to the parent
-  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
-}
+// Components
+@import "mixins/alerts";
+@import "mixins/buttons";
+@import "mixins/panels";
+@import "mixins/pagination";
+@import "mixins/list-group";
+@import "mixins/nav-divider";
+@import "mixins/forms";
+@import "mixins/progress-bar";
+@import "mixins/table-row";
 
-// Retina image
-// -------------------------------------------------------
-// Short retina mixin for setting background-image and -size. Note that the
-// spelling of `min--moz-device-pixel-ratio` is intentional.
-// Taken from bootstrap 3.2 
+// Skins
+@import "mixins/background-variant";
+@import "mixins/border-radius";
+@import "mixins/gradients";
 
-@mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x) {
-  background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path("#{$file-1x}"), "#{$file-1x}"));
+// Layout
+@import "mixins/clearfix";
+@import "mixins/center-block";
+@import "mixins/nav-vertical-align";
+@import "mixins/grid-framework";
+@import "mixins/grid";
 
-  @media
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (   min--moz-device-pixel-ratio: 2),
-  only screen and (     -o-min-device-pixel-ratio: 2/1),
-  only screen and (        min-device-pixel-ratio: 2),
-  only screen and (                min-resolution: 192dpi),
-  only screen and (                min-resolution: 2dppx) {
-    background-image: url(if($bootstrap-sass-asset-helper, twbs-image-path("#{$file-2x}"), "#{$file-2x}"));
-    background-size: $width-1x $height-1x;
-  }
-}
+
+
+
+

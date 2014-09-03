@@ -1,5 +1,12 @@
 // -- Variables
 
+//== Globals
+
+$border-radius: 8px;
+$border-radius-small: 8px;
+$border-radius-large: 8px;
+//== padding
+$padding:    5px;
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -42,6 +49,8 @@ $font-size-h5:            $font-size-base ;
 $font-size-h6:            ceil(($font-size-base * 0.85)) ; // ~12px
 
 $line-height-base:        1.428571429 ; // 20/14
+$line-height-small:       1.428571429 ;
+$line-height-large:       1.428571429 ;
 $line-height-computed:    floor(($font-size-base * $line-height-base)) ; // ~20px
 
 $headings-font-family:    inherit ;
@@ -138,7 +147,33 @@ $navbar-float:               left;
 
 $hero-bg:                   rgba(0,0,0,0);
 $hero-width:                100%;
+$hero-height:               100px;
+$hero-max-height:           100px;
 
 //== main content
 
+
+
 //== footer
+
+
+//== Forms
+
+$legend-color:              $text-color;
+$legend-border-color:       $gray-light;
+$form-control-padding:      5px;
+$input-height-base:         25px;
+$input-color:               $text-color;
+$input-bg:                  $white;
+$input-border:              $gray-light;
+$input-border-radius:       $border-radius;
+$input-border-focus:        $gray-light;
+$input-color-placeholder:   $gray-light;
+$input-bg-disabled:         $gray-light;
+$input-bg-disabled:         $gray-light;
+$input-height-small:        20px;
+$input-height-large:        50px;
+
+
+
+

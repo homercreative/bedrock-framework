@@ -1,3 +1,16 @@
 header{
-  background-color:$header-background-color;
+
+  @if $header-bg-image == "img-src" {
+    background: $header-bg no-repeat fixed center;
+  }@else {
+    background: $header-bg url($header-bg-image) no-repeat fixed center;
+  }
+  height: $header-height;
+  width: $header-width;
+
 }
+
+//== Header
+
+$header-height:              auto;
+$header-width:               100%;
