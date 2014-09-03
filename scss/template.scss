@@ -19,8 +19,18 @@
 // -- end framework
 
 // -- Plugins
-@import "plugins/flexslider";
+@if($owlCarousel){
+    @import "plugins/owlcarousel";
+}
+@if($modals){
+    @import "plugins/modals";
+}
+@if($full-page){
+    @import "plugins/fullpage";
+}
+
 @import "plugins/fontawesome";
+
 // -- end plugins
 
 @import "breakpoints/bp-layout";
@@ -42,22 +52,5 @@
 {
   @import "breakpoints/bp-xl";
 }
-
-// Print styles
-@media print {
-	body {
-		// Smaller type for printing. Save a tree
-		font-size: percentage(10 / 16);
-		@include adjust-leading-to(2);
-	}
-}
-
-// IOS specifics
-@media screen and (max-width: 769px) {  // Absolute measure here, as we're talking about devices, not screen size
-	body {
-		-webkit-text-size-adjust:none; 			// Stop iPhone/iPad from scaling text
-	}
-}
-
 
 // -- end breakpoints
