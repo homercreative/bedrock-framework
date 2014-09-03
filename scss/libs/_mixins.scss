@@ -41,6 +41,7 @@
   &:after {
     clear: both;
   }
+  @extend clearfix;
 }
 
 // Box Sizing

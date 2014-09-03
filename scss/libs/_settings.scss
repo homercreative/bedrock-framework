@@ -6,7 +6,7 @@ $border-radius: 8px;
 $border-radius-small: 8px;
 $border-radius-large: 8px;
 //== padding
-$padding:    5px;
+$padding:    15px;
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
@@ -26,6 +26,7 @@ $brand-danger:          #d9534f ;
 $white:                 #fff;
 $text-color:            $gray-dark ;
 $link-color:            $brand-primary ;
+$link-decoration:       none;
 $link-hover-color:      darken($link-color, 15%) ;
 
 
@@ -145,10 +146,10 @@ $identity-image:             '/src/';
 $navbar-bg:                  rgba(0,0,0,0);
 $navbar-height:              auto;
 $navbar-width:               60%;
-$navbar-float:               left;
+$navbar-float:               right;
 $navbar-margin:              0 0 0 0;
 $navbar-li-float:            left;
-$navbar-li-width:            100%;
+$navbar-li-width:            auto;
 
 //== Forms
 
