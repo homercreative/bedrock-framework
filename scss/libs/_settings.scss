@@ -1,15 +1,15 @@
 // -- Responsive Settings
 
-$screen-xs-max            : 500 ;
+$screen-xs-max            : 500;
 $screen-sm-min            : 600;
 $screen-sm-max            : 700;
 $screen-md-min            : 800;
 $screen-md-max            : 1024;
 $screen-lg-min            : 1010;
 
-$container-sm             :100;
-$container-md             :100;
-$container-lg             :100;
+$container-sm             : 100%;
+$container-md             : 1080px;
+$container-lg             : 1080px;
 
 // Grid
 $grid-columns             : 12;
