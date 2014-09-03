@@ -11,6 +11,7 @@
 @import "libs/mixins";
 @import "libs/gridmixings";
 @import "libs/placeholders";
+@import "libs/nav";
 
 @import "libs/grid";
 @import "libs/forms";
@@ -22,22 +23,24 @@
 @import "plugins/fontawesome";
 // -- end plugins
 
+@import "breakpoints/bp-layout";
+
 // -- breakpoints
 @media (max-width: $screen-xs-max)
 {
-
+  @import "breakpoints/bp-small";
 }
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
 {
-
+  @import "breakpoints/bp-med";
 }
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max)
 {
-
+  @import "breakpoints/bp-large";
 }
 @media (min-width: $screen-lg-min)
 {
-
+  @import "breakpoints/bp-xl";
 }
 
 // Print styles
