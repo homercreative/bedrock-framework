@@ -1,3 +1,5 @@
+@import "compass/css3";
+@import "compass/utilities";
 // HEX to RGB
 // http://codepen.io/sturobson/pen/hdKyv
 // -------------------------------------------------------
@@ -156,6 +158,11 @@
 @mixin font-size($sizeValue: 12 ){
   font-size: $sizeValue + px; //fallback for old browsers
   font-size: (0.125 * $sizeValue) + rem;
+}
+
+
+@mixin replaceText($src){
+
 }
 
 // Mixins From BootStrap

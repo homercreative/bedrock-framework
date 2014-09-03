@@ -7,10 +7,16 @@ header{
   }
   height: $header-height;
   width: $header-width;
+  font-weight: $header-font-weight;
+  color: $header-color;
+  margin:$header-margin;
 
+  @include clearfix();
 }
 
-//== Header
-
-$header-height:              auto;
-$header-width:               100%;
+  .identity {
+    width: $identity-width;
+    height: $identity-height;
+    float: $identity-float;
+    @include replace-text($identity-image);
+  }

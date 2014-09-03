@@ -126,6 +126,9 @@ $header-bg:                  rgba(0,0,0,0);
 $header-bg-image:            "img-src";
 $header-height:              auto;
 $header-width:               100%;
+$header-font-weight:         500;
+$header-color:               $gray-dark;
+$header-margin:              0 0 0 0;
 
 //== Top
 $top-bg:                     rgba(0,0,0,0);
@@ -136,26 +139,16 @@ $top-width:                  100%;
 $identity-width:             100px;
 $identity-height:            100px;
 $identity-float:             left;
+$identity-image:             '/src/';
 
 //== Navbar
 $navbar-bg:                  rgba(0,0,0,0);
 $navbar-height:              auto;
 $navbar-width:               60%;
 $navbar-float:               left;
-
-//== hero
-
-$hero-bg:                   rgba(0,0,0,0);
-$hero-width:                100%;
-$hero-height:               100px;
-$hero-max-height:           100px;
-
-//== main content
-
-
-
-//== footer
-
+$navbar-margin:              0 0 0 0;
+$navbar-li-float:            left;
+$navbar-li-width:            100%;
 
 //== Forms
 

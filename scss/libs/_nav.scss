@@ -1,15 +1,13 @@
-nav{
-  position: relative;
-  min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-
-
-  // Prevent floats from breaking the navbar
-  @include clearfix();
-
-  ul{
-
-    li{
-
+nav {
+  float: $navbar-float;
+  width: $navbar-width;
+  margin: $navbar-margin;
+  height: $navbar-height;
+  ul {
+    li {
+      float: $navbar-li-float;
+      width: $navbar-li-width;
+      display: block;
     }
   }
 }
