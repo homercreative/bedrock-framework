@@ -17,7 +17,6 @@ $brand-warning:         #f0ad4e ;
 $brand-danger:          #d9534f ;
 
 $white:                 #fff;
-$body-bg:               #fff ;
 $text-color:            $gray-dark ;
 $link-color:            $brand-primary ;
 $link-hover-color:      darken($link-color, 15%) ;
@@ -110,8 +109,36 @@ $container-large-desktop:      ((1140px + $grid-gutter-width)) ;
 $container-lg:                 $container-large-desktop ;
 
 
+//== Body
+$body-bg:                    $white;
 
+//== Header
+$header-bg:                  rgba(0,0,0,0);
+$header-bg-image:            "img-src";
+$header-height:              auto;
+$header-width:               100%;
+
+//== Top
+$top-bg:                     rgba(0,0,0,0);
+$top-height:                 auto;
+$top-width:                  100%;
+
+//== Identity
+$identity-width:             100px;
+$identity-height:            100px;
+$identity-float:             left;
 
 //== Navbar
+$navbar-bg:                  rgba(0,0,0,0);
+$navbar-height:              auto;
+$navbar-width:               60%;
+$navbar-float:               left;
 
-$navbar-background: rgba(0,0,0,0);
+//== hero
+
+$hero-bg:                   rgba('0,0,0,0');
+$hero-width:                100%;
+
+//== main content
+
+//== footer
