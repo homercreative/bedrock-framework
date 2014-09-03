@@ -1,0 +1,11 @@
+// large break point
+
+@for $i from 1 through $column-count {
+    .col-l-#{$i} {
+        width : column-calc($i);
+    }
+}
+
+.container {
+    min-width: em-font($bp-large);
+}

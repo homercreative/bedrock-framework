@@ -1,0 +1,58 @@
+
+// ::Imports pre-render. Must be after reset
+// ------------------------------------------------------------
+@import "compass/typography/vertical_rhythm";
+@import "compass/css3";
+@import "compass/utilities";
+
+// -- Framework
+@import "libs/reset";
+@import "libs/settings";
+@import "libs/mixins";
+@import "libs/placeholders";
+@import "libs/icons";
+@import "libs/layouts";
+@import "libs/forms";
+@import "libs/typography";
+// -- end framework
+
+// -- Plugins
+@import "plugins/flexslider";
+// -- end plugins
+
+// -- breakpoints
+@media (max-width: $screen-xs-max)
+{
+
+}
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+{
+
+}
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+{
+
+}
+@media (min-width: $screen-lg-min)
+{
+
+}
+
+// Print styles
+@media print {
+	body {
+		// Smaller type for printing. Save a tree
+		font-size: percentage(10 / 16);
+		@include adjust-leading-to(2);
+	}
+}
+
+// IOS specifics
+@media screen and (max-width: 769px) {  // Absolute measure here, as we're talking about devices, not screen size
+	body {
+		-webkit-text-size-adjust:none; 			// Stop iPhone/iPad from scaling text
+	}
+}
+
+
+// -- end breakpoints
