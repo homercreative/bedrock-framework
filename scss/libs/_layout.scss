@@ -13,9 +13,9 @@ a {
 header {
 
   @if $header-bg-image == "img-src" {
-    background: $header-bg no-repeat fixed center;
+    background-color: $header-bg;
   } @else {
-    background: $header-bg url($header-bg-image) no-repeat fixed center;
+    background: $header-bg $header-bg-image;
   }
   height: $header-height;
   width: $header-width;
