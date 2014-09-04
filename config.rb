@@ -5,10 +5,10 @@
 # -----------------------------------------------------------------------------
 
 http_path = "/"
-css_dir = "css"
-sass_dir = "scss"
-images_dir = "img"
-javascripts_dir = "js"
+css_dir = "../css"
+sass_dir = "../scss"
+images_dir = "../img"
+javascripts_dir = "../js"
 # svg_dir = "assets/svg"
 # fonts_dir = "assets/fonts"
 # docs_dir = "assets/docs"
