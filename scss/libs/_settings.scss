@@ -174,3 +174,20 @@ $input-bg-disabled:         $gray-light;
 $input-bg-disabled:         $gray-light;
 $input-height-small:        20px;
 $input-height-large:        50px;
+
+// == modal boxes
+$zindex-modal:                        2001;
+$modal-content-bg:                    $white;
+$modal-content-fallback-border-color: $gray-light;
+$modal-content-border-color:          $gray-light;
+$zindex-modal-background:             2000;
+$modal-backdrop-bg:                   $white;
+$modal-backdrop-opacity:              1;
+$modal-title-padding:                 $padding;
+$modal-header-border-color:           $gray-light;
+$modal-title-line-height:             100px;
+$modal-inner-padding:                 $padding;
+$modal-footer-border-color:           $gray-light;
+$modal-md:                            300px;
+$modal-sm:                            300px;
+$modal-lg:                            300px;

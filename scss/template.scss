@@ -20,13 +20,13 @@
 
 // -- Plugins
 @if($owlCarousel){
-    @import "plugins/owlcarousel";
+    @include owlCarousel;
 }
 @if($modals){
-    @import "plugins/modals";
+    @include modals;
 }
 @if($full-page){
-    @import "plugins/fullpage";
+    @include fullpage;
 }
 
 @import "plugins/fontawesome";
