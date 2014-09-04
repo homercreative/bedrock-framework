@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
     var fullpage = false; //  full-screen fullpage // https://github.com/alvarotrigo/fullPage.js
+    var fullPageId = '#fullpage'; // full screen full page div id
+
     var share = false; // Social media // http://sharebutton.co/
     var carousel = false; // OWl Carousel // http://owlgraphic.com/owlcarousel/
     var lazyLoad = false; // LazyLoad //
@@ -24,9 +26,11 @@ $(document).ready(function(){
         'urlRe': embed
     });
 
+
+
     if(fullpage){
         $.getScript("js/plugins/jquery.fullpage.js");
-        $('#fullpage').fullpage({
+        $(fullPageId).fullpage({
             'verticalCentered': false,
             'css3': true,
             'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
