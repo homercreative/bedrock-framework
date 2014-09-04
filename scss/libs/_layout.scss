@@ -56,23 +56,23 @@ nav {
     @media (min-width: $grid-float-breakpoint) {
       width:$navbar-li-width;
     }
-    a {
-      position: relative;
-      display: block;
-      width: 100%;
-      display: block;
-      padding: $padding;
-      text-decoration: none;
-      background-color: $link-color;
-      color: $white;
 
-      @include transition-property(all);
-      @include transition-duration(0.5s);
-      @include transition-timing-function(ease-in-out);
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
+  }
+  a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: block;
+    padding: $padding;
+    text-decoration: none;
+    color: $white;
+
+    @include transition-property(all);
+    @include transition-duration(0.5s);
+    @include transition-timing-function(ease-in-out);
+    &:hover,
+    &:focus {
+      text-decoration: none;
     }
   }
 }
