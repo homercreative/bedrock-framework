@@ -1,0 +1,23 @@
+// Column mixins
+// -------------------------------------------------------
+
+// Returns a grid setup
+@mixin grid ($prefix: '', $columns: $column-count) {
+  @for $i from 1 through $columns {
+    .col-#{$prefix}#{$i} {
+      width       : column-calc($i, $columns);
+    }
+  }
+}
+
+
+
+// Returns the css needed for the a single column
+@mixin column($columns, $prepend : 0, $append : 0) {
+  float           : left;
+  margin-left     : column-calc($prepend);
+  margin-right    : column-calc($append);
+  position        : relative;
+  width           : column-calc($columns);
+  padding         : 0 $gutter;
+}

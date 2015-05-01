@@ -1,0 +1,7 @@
+
+// Use clearfix if you need general clearfixing
+.clearfix 			{ @include clearfix; }
+
+
+// Use pie-clearfix if you need clearfixing that doesn't use overflow: hidden
+.pie-clearfix 		{ @include pie-clearfix; }

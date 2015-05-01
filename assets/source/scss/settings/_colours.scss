@@ -1,0 +1,23 @@
+// SET UP YOUR COLOUR VARIABLES IN THIS FILE
+
+
+// Colours
+// ------------------------------------------------------------
+
+// Default Colours
+$white								        : #FFFFFF;
+$black                                      : #000000;
+$darkest                                    : #202020;
+
+
+// Tones of grey
+$grey-darker                                : $darkest;
+$grey-dark                                  : lighten($darkest, 10);
+$grey-mid                                   : lighten($darkest, 40);
+$grey-light                                 : lighten($darkest, 80);
+$grey-ligher                                : lighten($darkest, 85);
+
+
+// Base Colours
+$base-background                            : $white;
+$base-color									: $darkest;

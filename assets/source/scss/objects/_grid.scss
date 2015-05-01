@@ -1,0 +1,28 @@
+[class^="col-"] {
+  padding: $gutter;
+  position: relative;
+  width: 100%;
+
+  @include respond-to($bp-small, $IE9: false) {
+    float           : left;
+  }
+
+}
+
+
+.row {
+
+}
+
+
+// Build the grid system based on the defined breakpoint list
+@each $prefix, $size in $bp-grids  {
+
+  @include respond-to($size, $IE9: false) {
+
+    @include grid ($prefix)
+
+  }
+
+}
+

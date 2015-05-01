@@ -1,0 +1,50 @@
+// Bedrock Framework
+
+// Implements the ITCSS Layer Pattern
+
+@import "compass";
+
+/*
+ * 1. Settings
+ * These contain global settings like colours base font size and config variables.
+ * Other settings should live beside the code they belong to keeping everything trim
+*/
+@import "settings/settings";
+
+/*
+ * 2. Tools
+ * Global Mixins and Functions that need to be access by the whole layout
+*/
+@import "tools/tools";
+
+/*
+ * 3. Generic
+ * The first layer that produces any css. Very high level css that is seldom changed
+*/
+@import "generic/generic";
+
+/*
+ * 4. Elements
+ * These are the bare un classed items Headings etc this is where we define the base styling for these
+*/
+@import "elements/elements";
+
+/*
+ * 5. Objects
+ * First layer we start to use class based selectors
+ * You will find common classes in here like .wrapper, .row
+*/
+@import "objects/objects";
+
+/*
+ * 6. Components
+ * The layer where we style recognisable pieces of UI. We shouldn't find any selectors with a lower specificity than one class
+*/
+@import "components/components";
+
+/*
+ * 7. Trumps
+ * This layer beats or trumps all other layers. It has the power to override anything at all. Helper and utility classes.
+ * !important rules and clearfixes etc will be found in here along with layout helpers such as grid overlays etc.
+*/
+@import "trumps/trumps";
