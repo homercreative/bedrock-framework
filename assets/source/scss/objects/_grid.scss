@@ -1,3 +1,4 @@
+// Base col system css selector
 [class^="col-"] {
   padding: $gutter;
   position: relative;
@@ -9,12 +10,6 @@
 
 }
 
-
-.row {
-
-}
-
-
 // Build the grid system based on the defined breakpoint list
 @each $prefix, $size in $bp-grids  {
 
@@ -24,5 +19,33 @@
 
   }
 
+}
+
+
+
+.container {
+  @extend .pie-clearfix;
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+
+  @each $prefix, $size in $bp-grids  {
+
+    @if $size != $bp-max {
+      @include respond-to($size, $IE9: false) {
+
+        min-width: em-font($size);
+      }
+
+    }
+  }
+
+  max-width: em-font($bp-max);
+
+}
+
+
+.row {
+  @extend .pie-clearfix;
 }
 

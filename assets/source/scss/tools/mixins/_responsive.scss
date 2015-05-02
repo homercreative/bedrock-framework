@@ -9,12 +9,12 @@
     .lt-ie9 & {
       @content;
     }
-    @media screen and (min-width: $media-min)  {
+    @media screen and (min-width: em-font($media-min))  {
       @content;
     }
   }
   @else {
-    @media screen and (min-width: $media-min) {
+    @media screen and (min-width: em-font($media-min)) {
       @content;
     }
   }
@@ -25,12 +25,12 @@
     .lt-ie9 & {
       @content;
     }
-    @media screen and (max-width: $media-max - 1px)  {
+    @media screen and (max-width: em-font($media-max - 1px))  {
       @content;
     }
   }
   @else {
-    @media screen and (max-width: $media-max - 1px) {
+    @media screen and (max-width: em-font($media-max - 1px)) {
       @content;
     }
   }
@@ -42,12 +42,12 @@
     .lt-ie9 & {
       @content;
     }
-    @media screen and (min-width: $media-min) and (max-width: $media-max)  {
+    @media screen and (min-width: em-font($media-min)) and (max-width: em-font($media-max))  {
       @content;
     }
   }
   @else {
-    @media screen and (min-width: $media-min) and (max-width: $media-max) {
+    @media screen and (min-width: em-font($media-min)) and (max-width: em-font($media-max)) {
       @content;
     }
   }

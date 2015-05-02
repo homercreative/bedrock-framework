@@ -29,7 +29,7 @@ $bp-small 									: 480px;
 $bp-med										: 800px;
 $bp-large									: 1000px;
 $bp-xl										: 1180px;
-
+$bp-max                                     : $bp-xl;
 
 // The grids we want to use and at what breakpoints
 $bp-grids : (
