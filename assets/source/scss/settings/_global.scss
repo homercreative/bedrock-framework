@@ -7,6 +7,7 @@
 
 $base-font-size								: 16px; 				// Sets the browser default size. Shouldn't need to change this.
 $base-font-weight                           : 300;
+$base-font-bold-weight                      : bold;
 $base-line-height							: 6px;					// Baseline grid. Set to a sensible, small size.
 $base-font-family                           : Helvetica, Arial, "Lucida Grande", sans-serif;
 $round-to-nearest-half-line					: false;  				// Round the line height to the nearest half line height. Off by default

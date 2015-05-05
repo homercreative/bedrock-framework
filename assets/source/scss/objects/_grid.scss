@@ -1,6 +1,20 @@
+
+// Rows contain the columns and hold them all in place
+.row {
+  @extend .pie-clearfix;
+  margin-bottom: rhythm(1, $base-font-size);
+
+  // Nested rows need to have the columns gutters removed to allow seamless nesting
+  .row {
+    margin-left: (-$gutter);
+    margin-right: (-$gutter);
+  }
+
+}
+
 // Base col system css selector
 [class^="col-"] {
-  padding: $gutter;
+  padding: 0 $gutter;
   position: relative;
   width: 100%;
 
@@ -22,7 +36,7 @@
 }
 
 
-
+// Build the content containers and the breakpoints
 .container {
   @extend .pie-clearfix;
   margin: 0 auto;
@@ -42,10 +56,5 @@
 
   max-width: em-font($bp-max);
 
-}
-
-
-.row {
-  @extend .pie-clearfix;
 }
 

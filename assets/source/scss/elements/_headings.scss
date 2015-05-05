@@ -1,0 +1,77 @@
+
+// SET-UP CORE FONT HEADING SIZING AND RHYTHM
+
+
+// Default Heading Sizing and spacing
+// ------------------------------------------------------------
+
+h1, .h1 {
+  @include adjust-font-size-to(24px);
+  margin: 0 0 rhythm(1, 24px) 0;
+
+  @include respond-to($bp-med, $IE9: false) {
+
+    @include adjust-font-size-to(36px);
+    margin-bottom: rhythm(2, 36px);
+
+  }
+}
+
+h2, .h2 {
+  @include adjust-font-size-to(22px);
+  margin: 0 0 rhythm(1, 22px) 0;
+
+  @include respond-to($bp-med, $IE9: false) {
+
+    @include adjust-font-size-to(30px);
+    margin-bottom: rhythm(2, 30px);
+
+  }
+}
+
+h3, .h3 {
+  @include adjust-font-size-to(20px);
+  margin: 0 0 rhythm(1, 20px) 0;
+
+  @include respond-to($bp-med, $IE9: false) {
+
+    @include adjust-font-size-to(26px);
+    margin-bottom: rhythm(2, 26px);
+
+  }
+}
+
+h4, .h4 {
+  @include adjust-font-size-to(18px);
+  margin: 0 0 rhythm(1, 9px) 0;
+
+  @include respond-to($bp-med, $IE9: false) {
+
+    @include adjust-font-size-to(22px);
+    margin-bottom: rhythm(2, 11px);
+
+  }
+}
+
+h5, .h5 {
+  @include adjust-font-size-to(16px);
+  margin: 0;
+
+  @include respond-to($bp-med, $IE9: false) {
+
+    @include adjust-font-size-to(18px);
+
+  }
+}
+
+h6, .h6 {
+  @include adjust-font-size-to(16px);
+  font-weight: $base-font-bold-weight;
+  margin: 0;
+
+  @include respond-to($bp-med, $IE9: false) {
+
+    @include adjust-font-size-to(16px);
+
+  }
+}
