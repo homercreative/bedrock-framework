@@ -1,0 +1,30 @@
+// Objects imagery
+// ------------------------------------------------------------
+
+
+img {
+
+  &.full {
+    display: block;
+    width: 100%;
+  }
+
+  &.left, &.right, &.circle{
+    margin-bottom: rhythm(2, $base-font-size);
+  }
+
+  &.left {
+    float: left;
+    margin-right: $gutter;
+  }
+
+  &.right {
+    float: right;
+    margin-left: $gutter;
+  }
+
+  &.circle {
+    @include border-radius(50%);
+  }
+
+}

@@ -1,35 +1,15 @@
-// Core typography
+// Elements type
 // ------------------------------------------------------------
-
 
 p, ol, ul,  pre, label {
   @include adjust-font-size-to($base-font-size);
   margin: 0 0 rhythm(2, $base-font-size) 0;
 }
 
-
-p {
-  img {
-    float: left;
-    margin-bottom: rhythm(2, $base-font-size);
-
-    &.left {
-      margin-right: $gutter;
-    }
-
-    &.right {
-      float: right;
-      margin-left: $gutter;
-    }
-
-  }
-
-}
-
-
 ul, ol {
   list-style-position: outside;
   margin-left: 1.1rem;
+  padding-left: 0;
 }
 
 ul {
