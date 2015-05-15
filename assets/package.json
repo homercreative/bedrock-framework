@@ -18,5 +18,8 @@
     "grunt-contrib-watch": "~0.5.x",
     "grunt-contrib-concat": "~0.3.0"
   },
-  "engine": "node >= 0.10"
+  "engine": "node >= 0.10",
+  "devDependencies": {
+    "grunt-contrib-requirejs": "^0.4.4"
+  }
 }
