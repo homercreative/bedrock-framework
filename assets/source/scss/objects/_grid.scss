@@ -19,7 +19,10 @@
   width: 100%;
 
   @include respond-to($bp-small, $IE9: false) {
-    float           : left;
+    float : left;
+    &.rev {
+      float : right;
+    }
   }
 
 }
@@ -34,6 +37,29 @@
   }
 
 }
+
+// Build the push system based on the defined breakpoint list
+@each $prefix, $size in $bp-grids  {
+
+  @include respond-to($size, $IE9: false) {
+
+    @include push ($prefix)
+
+  }
+
+}
+
+// Build the pull system based on the defined breakpoint list
+@each $prefix, $size in $bp-grids  {
+
+  @include respond-to($size, $IE9: false) {
+
+    @include pull ($prefix)
+
+  }
+
+}
+
 
 
 // Build the content containers and the breakpoints

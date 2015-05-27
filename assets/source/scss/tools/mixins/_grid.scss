@@ -11,6 +11,24 @@
 }
 
 
+// Returns a push grid setup
+@mixin push ($prefix: '', $columns: $column-count) {
+  @for $i from 1 through $columns {
+    .push-#{$prefix}#{$i} {
+      margin-left: column-calc($i, $columns);
+    }
+  }
+}
+
+// Returns a push grid setup
+@mixin pull ($prefix: '', $columns: $column-count) {
+  @for $i from 1 through $columns {
+    .pull-#{$prefix}#{$i} {
+      margin-right: column-calc($i, $columns);
+    }
+  }
+}
+
 
 // Returns the css needed for the a single column
 @mixin column($columns, $prepend : 0, $append : 0) {
