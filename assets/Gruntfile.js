@@ -1,104 +1,43 @@
 module.exports = function(grunt) {
-
-    // configure the tasks
     grunt.initConfig({
-
-        clean: {
-            stylesheets: {
-                src: ['css/*.css', '!theme.css']
-            },
-            scripts:{
-                src:['js/*.js', '!theme.js']
-            }
-        },
         sass: {
-            stylesheets: {
+            build: {
                 options:{
                     style: 'expanded',
-                    compass: true,
-                    precision: '5'
+                        compass: true,
+                        precision: '5'
                 },
                 files: {
                     'css/template.css' : 'source/scss/template.scss'
+                    //'css/ie.css' : 'source/scss/ie.scss'
                 }
             }
         },
-        autoprefixer: {
+        requirejs: {
             build: {
-                expand: true,
-                cwd: 'css',
-                src: [ '**/*.css' ],
-                dest: 'css'
-            }
-        },
-        cssmin: {
-            build: {
-                files: {
-                    'build/application.css': [ 'css/**/*.css' ]
+                options: {
+                    wrap: false,
+                    almond: true,
+                    name: 'source/javascript/lib/almond/almond.js',
+                    mainConfigFile: "source/javascript/config/require.js",
+                    include: ['source/javascript/script.js'],
+                    out: "js/script.js"
                 }
-            }
-        },
-        coffee: {
-            build: {
-                expand: true,
-                cwd: 'source',
-                src: [ '**/*.coffee' ],
-                dest: 'js',
-                ext: '.js'
-            }
-        },
-        uglify: {
-
-            build: {
-                files: {
-                    'js/script.min.js': 'js/script.js'
-                }
-            }
-        },
-        concat: {
-            options:{
-                separator: '\r\n'
-            },
-            build: {
-                src: ['source/js/plugins/*.js', 'source/js/script.js'],
-                dest: 'js/script.js'
             }
         },
         watch: {
             build:{
-                files: ['source/js/**/*.js', 'source/scss/**/*.scss'],
+                files: ['source/javascript/**/*.js', 'source/scss/**/*.scss'],
                 tasks: ['build']
             }
 
         }
 
 
-
     });
 
-    grunt.registerTask(
-        'stylesheets',
-        'Compiles the stylesheets.',
-        [ 'sass']
-    );
-
-    grunt.registerTask(
-        'scripts',
-        'Compiles the JavaScript files.',
-        [ 'coffee', 'concat' ]
-    );
-
-    grunt.registerTask(
-        'compress',
-        'compress and compiles all js and css',
-        ['uglify']
-    );
-
-    grunt.registerTask(
-        'build',
-        'Compiles all of the assets and copies the files to the build directory.',
-        [ 'clean', 'stylesheets', 'scripts', 'compress', 'watch' ]
-    );
+    grunt.registerTask('build', ['sass','requirejs', 'watch']);
+    grunt.registerTask('default', ['build']);
 
     // load the tasks
     grunt.loadNpmTasks('grunt-contrib-copy');
@@ -108,7 +47,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
 
-
-    // define the tasks
 };
