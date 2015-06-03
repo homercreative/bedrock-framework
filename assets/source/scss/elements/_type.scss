@@ -27,3 +27,17 @@ strong, b 	{
 em, i, q 	{
   font-style: italic;
 }
+
+
+blockquote {
+  padding: ($gutter * 2);
+  @include adjust-font-size-to(($base-font-size + 4));
+
+  p {
+    @include adjust-font-size-to(($base-font-size + 4));
+  }
+
+  cite {
+    @include adjust-font-size-to(($base-font-size - 4));
+  }
+}
