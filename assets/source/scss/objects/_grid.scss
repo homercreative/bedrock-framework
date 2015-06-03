@@ -27,6 +27,11 @@
 
 }
 
+a[class^="col-"] {
+  display: block;
+  line-height: 0;
+}
+
 // Build the grid system based on the defined breakpoint list
 @each $prefix, $size in $bp-grids  {
 

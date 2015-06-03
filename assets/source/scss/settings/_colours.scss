@@ -21,3 +21,14 @@ $grey-ligher                                : lighten($darkest, 85);
 // Base Colours
 $base-background                            : $white;
 $base-color									: $darkest;
+
+
+$link-normal                                : #008CBA;
+$link-hover                                 : darken(#008CBA, 40);
+$link-visited                               : darken(#008CBA, 60);
+
+
+// Notice Colours
+$action                                     : #008CBA;
+$positive                                   : #43AC6A;
+$caution                                    : #f04124;

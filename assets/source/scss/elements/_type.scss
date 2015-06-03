@@ -1,7 +1,7 @@
 // Elements type
 // ------------------------------------------------------------
 
-p, ol, ul,  pre, label {
+p, ol, ul,  pre {
   @include adjust-font-size-to($base-font-size);
   margin: 0 0 rhythm(2, $base-font-size) 0;
 }
