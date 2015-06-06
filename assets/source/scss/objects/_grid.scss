@@ -11,8 +11,7 @@
 
 }
 
-// Base col system css selector
-[class^="col-"] {
+.column-full {
   padding: 0 $gutter;
   position: relative;
   width: 100%;
@@ -25,6 +24,13 @@
   }
 
 }
+
+
+// Base col system css selector
+[class^="col-"] {
+  @extend .column-full;
+}
+
 
 a[class^="col-"] {
   display: block;
@@ -96,10 +102,6 @@ a[class^="col-"] {
 }
 
 // column helper classes
-.col-full {
-  @extend [class^="col-"];
-}
-
 .col-third {
   @include respond-to($bp-med, $IE9: false) {
 
