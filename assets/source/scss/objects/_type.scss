@@ -1,0 +1,14 @@
+// Objects typography
+// ------------------------------------------------------------
+
+
+p, ol, ul,  pre, label {
+
+  &.small {
+    @include adjust-font-size-to(($base-font-size - 2));
+  }
+
+  &.tiny {
+    @include adjust-font-size-to(($base-font-size - 4));
+  }
+}

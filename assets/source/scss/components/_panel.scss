@@ -1,0 +1,28 @@
+// Components Panel
+// ------------------------------------------------------------
+
+
+.panel {
+  background: $grey-lighter;
+  border: 1px solid $grey-light;
+  margin: 0 0 rhythm(2, $base-font-size) 0;
+  padding: $gutter;
+
+  @include pie-clearfix();
+
+
+  @include respond-to($bp-med, $IE9: false) {
+    padding: ($gutter * 2);
+  }
+
+  @include respond-to($bp-large, $IE9: false) {
+    margin: 0 0 rhythm(4, $base-font-size) 0;
+    padding-bottom: ($gutter * 4);
+    padding-top: ($gutter * 4);
+  }
+
+  &.compact {
+    padding: $gutter;
+  }
+
+}

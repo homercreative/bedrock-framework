@@ -1,0 +1,71 @@
+// Objects Buttons
+// ------------------------------------------------------------
+
+.btn {
+  background: $grey-mid;
+  border: none;
+  color: $white;
+  display: inline-block;
+  padding: $gutter ($gutter * 2);
+  text-align: center;
+
+
+  &.tiny {
+    padding: ($gutter / 2) $gutter;
+    @include adjust-font-size-to(($base-font-size - 4));
+  }
+
+  &.large {
+    padding: ($gutter * 1.5) ($gutter * 3);
+    @include adjust-font-size-to(($base-font-size + 4));
+  }
+
+
+  &.action {
+    background-color: $action;
+  }
+
+  &.positive {
+    background-color: $positive;
+  }
+
+  &.caution {
+    background-color: $caution;
+  }
+
+  &.reversed {
+    background-color: $white;
+    color: $base-color;
+  }
+
+  &.ghost {
+    background-color: transparent;
+    border: ($gutter / 4) solid $grey-mid;
+    color: $grey-mid;
+    font-weight: $base-font-bold-weight;
+
+    &.action {
+      border-color: $action;
+      color: $action;
+    }
+
+    &.positive {
+      border-color: $positive;
+      color: $positive;
+    }
+
+    &.caution {
+      border-color: $caution;
+      color: $caution;
+    }
+
+    &.reversed {
+      border-color: $white;
+      color: $white;
+    }
+
+  }
+
+
+}
+

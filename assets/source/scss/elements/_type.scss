@@ -1,0 +1,43 @@
+// Elements type
+// ------------------------------------------------------------
+
+p, ol, ul,  pre {
+  @include adjust-font-size-to($base-font-size);
+  margin: 0 0 rhythm(2, $base-font-size) 0;
+}
+
+ul, ol {
+  list-style-position: outside;
+  margin-left: 1.1rem;
+  padding-left: 0;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+strong, b 	{
+  font-weight: $base-font-bold-weight;
+}
+
+em, i, q 	{
+  font-style: italic;
+}
+
+
+blockquote {
+  padding: ($gutter * 2);
+  @include adjust-font-size-to(($base-font-size + 4));
+
+  p {
+    @include adjust-font-size-to(($base-font-size + 4));
+  }
+
+  cite {
+    @include adjust-font-size-to(($base-font-size - 4));
+  }
+}

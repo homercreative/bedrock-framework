@@ -1,0 +1,15 @@
+// Elements Links
+// ------------------------------------------------------------
+
+a {
+  color: $link-normal;
+
+  &:hover {
+      color: $link-hover;
+  }
+
+  &:visited {
+    color: $link-visited;
+  }
+
+}

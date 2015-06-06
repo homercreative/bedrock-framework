@@ -1,0 +1,34 @@
+// SET UP YOUR COLOUR VARIABLES IN THIS FILE
+
+
+// Colours
+// ------------------------------------------------------------
+
+// Default Colours
+$white								        : #FFFFFF;
+$black                                      : #000000;
+$darkest                                    : #202020;
+
+
+// Tones of grey
+$grey-darker                                : $darkest;
+$grey-dark                                  : lighten($darkest, 10);
+$grey-mid                                   : lighten($darkest, 40);
+$grey-light                                 : lighten($darkest, 80);
+$grey-lighter                               : lighten($darkest, 85);
+
+
+// Base Colours
+$base-background                            : $white;
+$base-color									: $darkest;
+
+
+$link-normal                                : #008CBA;
+$link-hover                                 : darken(#008CBA, 40);
+$link-visited                               : darken(#008CBA, 60);
+
+
+// Notice Colours
+$action                                     : #008CBA;
+$positive                                   : #43AC6A;
+$caution                                    : #f04124;
