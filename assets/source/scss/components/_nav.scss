@@ -1,8 +1,7 @@
+/*
+ * 6.xx Components / Navigation
+ * Holder file to bring in navigation systems
+*/
 
-nav[role="navigation"] {
-
-}
-
-.sub-nav {
-
-}
+@import "navigation/band";
+@import "navigation/responsive";

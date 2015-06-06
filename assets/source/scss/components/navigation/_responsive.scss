@@ -1,0 +1,41 @@
+
+#mobile-menu {
+  max-height: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  @include transition-property(max-height);
+  @include transition-duration(1s);
+  @include transition-timing-function(ease-in-out);
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: $gutter 5% $gutter * 2 5%;
+  }
+
+  li a {
+    border-bottom: 1px solid rgba($grey-mid, .3);
+    display: block;
+    padding: $gutter/2 0;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+    }
+  }
+
+  ul ul {
+    display: none;
+  }
+}
+
+#mobile-menu.opened {
+  max-height: 600px;
+}
+
+#tog-menu {
+  display: block;
+  text-align: center;
+  top: $gutter;
+}

@@ -67,6 +67,7 @@ a[class^="col-"] {
 // Global Page Wrapper
 .wrapper {
   @extend .pie-clearfix;
+  background: $white;
   position: relative;
 }
 
@@ -95,6 +96,9 @@ a[class^="col-"] {
 }
 
 // column helper classes
+.col-full {
+  @extend [class^="col-"];
+}
 
 .col-third {
   @include respond-to($bp-med, $IE9: false) {

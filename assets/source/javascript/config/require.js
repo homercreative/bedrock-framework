@@ -11,7 +11,8 @@ require.config({
     // map bower components to nice paths
     paths: {
         jquery: 'source/javascript/lib/jquery/jquery',
-        modernizr: 'source/javascript/lib/modernizr/modernizr'
+        modernizr: 'source/javascript/lib/modernizr/modernizr',
+        responsiveNav: 'source/javascript/br_lib/responsive-nav/nav'
     },
     shim: {
         modernizr: {

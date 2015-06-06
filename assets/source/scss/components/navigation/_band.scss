@@ -1,0 +1,30 @@
+nav[role="navigation"] {
+  background: $grey-dark;
+  margin: 0 0 rhythm(2, 36px) 0;
+  @include pie-clearfix();
+
+  ul {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+    @include pie-clearfix();
+  }
+
+  li {
+    float: left;
+  }
+
+  a {
+    color: $white;
+    display: block;
+    padding: $gutter ( $gutter * 2 );
+    text-decoration: none;
+
+    &:hover {
+      background: $grey-mid;
+    }
+
+  }
+
+
+}
