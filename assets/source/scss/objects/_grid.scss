@@ -1,4 +1,3 @@
-
 // Rows contain the columns and hold them all in place
 .row {
   @extend .pie-clearfix;
@@ -19,9 +18,9 @@
   width: 100%;
 
   @include respond-to($bp-small, $IE9: false) {
-    float : left;
+    float: left;
     &.rev {
-      float : right;
+      float: right;
     }
   }
 
@@ -33,48 +32,49 @@ a[class^="col-"] {
 }
 
 // Build the grid system based on the defined breakpoint list
-@each $prefix, $size in $bp-grids  {
+@each $prefix, $size in $bp-grids {
 
   @include respond-to($size, $IE9: false) {
 
-    @include grid ($prefix)
+    @include grid($prefix)
 
   }
 
 }
 
 // Build the push system based on the defined breakpoint list
-@each $prefix, $size in $bp-grids  {
+@each $prefix, $size in $bp-grids {
 
   @include respond-to($size, $IE9: false) {
 
-    @include push ($prefix)
+    @include push($prefix)
 
   }
 
 }
 
 // Build the pull system based on the defined breakpoint list
-@each $prefix, $size in $bp-grids  {
+@each $prefix, $size in $bp-grids {
 
   @include respond-to($size, $IE9: false) {
 
-    @include pull ($prefix)
+    @include pull($prefix)
 
   }
 
 }
 
-
+// Global Page Wrapper
+.wrapper {
+  @extend .pie-clearfix;
+  position: relative;
+}
 
 // Build the content containers and the breakpoints
 .container {
-  @extend .pie-clearfix;
-  margin: 0 auto;
-  position: relative;
-  width: 90%;
+  @include container($container);
 
-  @each $prefix, $size in $bp-grids  {
+  @each $prefix, $size in $bp-grids {
 
     @if $size != $bp-max {
       @include respond-to($size, $IE9: false) {
@@ -89,3 +89,16 @@ a[class^="col-"] {
 
 }
 
+// Build the content containers which is full width
+.container-full {
+  @include container(100%);
+}
+
+// column helper classes
+
+.col-third {
+  @include respond-to($bp-med, $IE9: false) {
+
+    width: column-calc(($column-count / 3));
+  }
+}

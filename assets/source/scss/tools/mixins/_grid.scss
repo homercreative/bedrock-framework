@@ -1,6 +1,15 @@
 // Column mixins
 // -------------------------------------------------------
 
+// Returns the css needed to make a container
+@mixin container($width: 100%) {
+  @extend .pie-clearfix;
+  margin: 0 auto;
+  position: relative;
+  width: $width;
+}
+
+
 // Returns a grid setup
 @mixin grid ($prefix: '', $columns: $column-count) {
   @for $i from 1 through $columns {
