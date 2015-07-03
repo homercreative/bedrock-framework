@@ -3,6 +3,8 @@
 // -------------------------------------------------------
 
 
+// Width Based Tools
+
 // Reference widths from settings file
 @mixin respond-to($media-min, $IE9: true) {
   @if $IE9 == true {
@@ -48,6 +50,57 @@
   }
   @else {
     @media screen and (min-width: em-font($media-min)) and (max-width: em-font($media-max)) {
+      @content;
+    }
+  }
+}
+
+
+// Height Based Tools
+
+@mixin respond-to-height($media-min, $IE9: true) {
+  @if $IE9 == true {
+    .lt-ie9 & {
+      @content;
+    }
+    @media screen and (min-height: $media-min)  {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (min-height: $media-min) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to-max-height($media-max, $IE9: true) {
+  @if $IE9 == true {
+    .lt-ie9 & {
+      @content;
+    }
+    @media screen and (max-height: ($media-max - 1px))  {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (max-height: ($media-max - 1px)) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to-min-max-height($media-min, $media-max, $IE9: true) {
+  @if $IE9 == true {
+    .lt-ie9 & {
+      @content;
+    }
+    @media screen and (min-height: $media-min) and (max-height: $media-max)  {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (min-height: $media-min) and (max-height: $media-max) {
       @content;
     }
   }

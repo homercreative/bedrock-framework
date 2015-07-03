@@ -19,7 +19,7 @@
         };
 
 
-    $.fn.responsiveNav = function () {
+    $.fn.responsiveNav = function (options) {
 
         function isMobile() {
             return ($(window).width() < settings.switchWidth);
