@@ -1,4 +1,4 @@
-// Column mixins
+// Grid mixins
 // -------------------------------------------------------
 
 // Returns the css needed to make a container
@@ -29,6 +29,17 @@
   }
 }
 
+// Returns a push halved grid setup
+@mixin push-half ($prefix: '', $columns: $column-count) {
+  @for $i from 1 through $columns {
+    .push-half-#{$prefix}#{$i} {
+      margin-left: column-calc(($i/2), $columns);
+    }
+  }
+}
+
+
+
 // Returns a push grid setup
 @mixin pull ($prefix: '', $columns: $column-count) {
   @for $i from 1 through $columns {
@@ -38,6 +49,14 @@
   }
 }
 
+// Returns a push halved grid setup
+@mixin pull-half ($prefix: '', $columns: $column-count) {
+  @for $i from 1 through $columns {
+    .pull-half-#{$prefix}#{$i} {
+      margin-right: column-calc(($i/2), $columns);
+    }
+  }
+}
 
 // Returns the css needed for the a single column
 @mixin column($columns, $prepend : 0, $append : 0) {

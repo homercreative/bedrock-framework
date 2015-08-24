@@ -108,3 +108,10 @@ a[class^="col-"] {
     width: column-calc(($column-count / 3));
   }
 }
+
+// centre helper to centre column in element or on page
+.center-col {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
