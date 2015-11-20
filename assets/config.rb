@@ -11,7 +11,7 @@ http_path = "./"
 http_images_path = "../img/"
 
 css_dir = "css"
-sass_dir = "scss"
+sass_dir = "./source/scss"
 images_dir = "img"
 javascripts_dir = "js"
 # svg_dir = "assets/svg"
