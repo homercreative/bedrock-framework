@@ -28,11 +28,11 @@
     </div>
     <div class="nav">
         <div class="container">
-            <nav class="column-full" id="main-nav">
+            <nav class="column-full nav-collapse">
                 <ul class="global-nav">
                     <li class="global-nav-item"><a href="/" title="">Home</a></li>
                     @var('areas', Node::getAreas(null, false))
-                    @var('ignore', ['homepage', 'news', 'events', 'blog', 'contact', 'big-numbers'])
+                    @var('ignore', ['homepage'])
                     @foreach($areas as $areaItem)
                         @if(!in_array($areaItem->tag, $ignore))
                             @if($areaItem->homepage != 1)
