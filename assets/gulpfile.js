@@ -15,9 +15,6 @@ var paths = {
     }
 };
 
-// Browserify
-var browserify = require('browserify');
-
 // Gulp
 var gulp = require('gulp'),
     rename = require('gulp-rename'),
@@ -33,15 +30,10 @@ var sass = require('gulp-ruby-sass'),
 
 // JS
 
-var concat = require('gulp-concat'),
-    jshint = require('gulp-jshint'),
-    source = require('vinyl-source-stream'),
-    buffer = require('vinyl-buffer'),
-    globby = require('globby'),
-    through = require('through2'),
-    reactify = require('reactify'),
-    uglify = require('gulp-uglify');
-
+var jshint = require('gulp-jshint'),
+    uglify = require('gulp-uglify'),
+    browserify = require('gulp-browserify'),
+    concat = require('gulp-concat');
 
 // compile all your Sass
 gulp.task('sass', function (){
@@ -58,58 +50,18 @@ gulp.task('sass', function (){
         .pipe(gulp.dest(paths.styles.dest));
 });
 
-gulp.task('scripts', function(){
-   gulp.src(paths.scripts.src + '*.js')
+gulp.task('scripts', function () {
+    return gulp.src(paths.scripts.src + '*.js', { read: false })
         .pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(concat('script.js'))
-        .pipe(gulp.dest(paths.scripts.dest))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
-        .pipe(gulp.dest(paths.scripts.dest))
-});
-
-gulp.task('bundle', function () {
-    // gulp expects tasks to return a stream, so we create one here.
-    var bundledStream = through();
-
-    bundledStream
-        // turns the output bundle stream into a stream containing
-        // the normal attributes gulp plugins expect.
-        .pipe(source('bundle.js'))
-        // the rest of the gulp task, as you would normally write it.
-        // here we're copying from the Browserify + Uglify2 recipe.
-        .pipe(buffer())
-        .pipe(sourcemaps.init({loadMaps: true}))
-        // Add gulp plugins to the pipeline here.
-        .pipe(uglify())
-        .on('error', gutil.log)
+        .pipe(browserify({ transform: ['coffeeify'], extensions: ['.coffee'] }))
+        .pipe(concat('script.min.js'))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest(paths.scripts.dest));
 
-    // "globby" replaces the normal "gulp.src" as Browserify
-    // creates it's own readable stream.
-    globby([paths.scripts.src + '*.js']).then(function(entries) {
-        // create the Browserify instance.
-        var b = browserify({
-            entries: entries,
-            debug: true,
-            transform: [reactify]
-        });
-
-        // pipe the Browserify stream into the stream we created earlier
-        // this starts our gulp pipeline.
-        b.bundle().pipe(bundledStream);
-    }).catch(function(err) {
-        // ensure any errors from globby are handled
-        bundledStream.emit('error', err);
-    });
-
-    // finally, we return the stream, so gulp knows when this task is done.
-    return bundledStream;
 });
 
-gulp.task('watch', ['sass', 'scripts'], function(){
+gulp.task('watch', ['sass', 'bundle', 'scripts'], function(){
         gulp.watch(paths.styles.src + "**/*.scss", ['sass']);
         gulp.watch(paths.scripts.src + "**/*.js", ['bundle','scripts']);
 });

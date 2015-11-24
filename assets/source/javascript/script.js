@@ -1,3 +1,2 @@
-var responsiveNav = require('responsive-nav');
-
-var nav = responsiveNav(".nav-collapse", {});
+var App = require('./app');
+App.start();

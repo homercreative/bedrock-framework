@@ -59,7 +59,6 @@
 
 @include($site->theme.'::partials.footer')
 
-<script src="/themes/{{$site->theme}}/assets/js/bundle.js"></script>
-<script src="/themes/{{$site->theme}}/assets/js/script.js"></script>
+<script src="/themes/{{$site->theme}}/assets/js/script.min.js"></script>
 </body>
 </html>
