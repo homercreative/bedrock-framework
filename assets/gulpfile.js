@@ -61,9 +61,10 @@ gulp.task('scripts', function () {
 
 });
 
-gulp.task('watch', ['sass', 'bundle', 'scripts'], function(){
+gulp.task('watch', ['sass', 'scripts'], function(){
         gulp.watch(paths.styles.src + "**/*.scss", ['sass']);
-        gulp.watch(paths.scripts.src + "**/*.js", ['bundle','scripts']);
+        gulp.watch(paths.scripts.src + "**/*.js", ['scripts']);
+        gulp.watch(paths.scripts.src + "**/*.coffee", ['scripts']);
 });
 
-gulp.task('default', ['sass','bundle', 'scripts']);
+gulp.task('default', ['sass','scripts']);
