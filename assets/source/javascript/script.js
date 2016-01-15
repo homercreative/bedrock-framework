@@ -1,2 +1,1 @@
-var App = require('./app');
-App.start();
+var jquery = require('jquery');
