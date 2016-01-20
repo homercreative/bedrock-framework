@@ -1,0 +1,19 @@
+// Components centering
+// ------------------------------------------------------------
+
+
+.cell-holder {
+  display: table;
+  height: 100%;
+  width: 100%;
+
+  &.center {
+    text-align: center;
+  }
+
+  .cell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+  }
+}
