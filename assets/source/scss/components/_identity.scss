@@ -1,0 +1,31 @@
+// Components identity
+// ------------------------------------------------------------
+
+%logo {
+  background-position: -20px -20px;
+  display: block;
+  height: $ident-height-small;
+  overflow: hidden;
+  text-indent: -119988px;
+  width: $ident-width-small;
+
+  @extend .sprite-sheet;
+}
+
+
+.identity {
+  margin: 0 auto;
+  width: 100px;
+
+  a {
+    @extend %logo;
+  }
+
+  @include respond-to($bp-large) {
+    background-position: -20px -20px;
+    margin: 0;
+    height: $ident-height-large;
+    width: $ident-width-large;
+  }
+
+}
